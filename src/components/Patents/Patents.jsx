@@ -21,8 +21,8 @@ const Patents = ({forAccount}) => {
 
 
     useEffect(() => {
-        const getAllPatentsHandler = async () => {
-            await patentsCtx.getAllPatents()
+        const getAllPatentsHandler = () => {
+            patentsCtx.getAllPatents()
             setLoadingPatents(false)
         }
         if (connected) {
@@ -36,7 +36,7 @@ const Patents = ({forAccount}) => {
         patents = patents.filter(patent => patent.patentOwner === contractCtx.currentAccount)
     }
 
-    console.log(connected, forAccount)
+    // console.log(connected, forAccount)
 
 
   return (
@@ -45,6 +45,7 @@ const Patents = ({forAccount}) => {
             <div className={classes["info-wrapper"]}>
                 <p>x{patents.length} patents</p>
             {(connected && forAccount) && <Button type={"link"} link={`/${currentAccount}/create-patent`} className={classes.btn}>Create Patent</Button>}
+           
             </div>
 
             {loadingPatents && <Loading />}

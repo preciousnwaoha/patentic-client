@@ -1,6 +1,8 @@
 .create-patent-form {
-    display: flex;
+    
 }
+
+
 
 .text {
     display: flex;
@@ -8,12 +10,13 @@
     background: var(--primary-700);
     padding: 1rem;
     border: 2px solid black;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem; 
 }
 
 .actions {
     background: var(--secondary-green-700);
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 1rem;
     padding: 1rem;
     border: 2px solid black;
 }
@@ -104,6 +107,8 @@
     
     .text {
         width: calc(65%);
+        border-radius: 1rem 0 0 1rem;
+        margin: 0,
     }
     
     .actions {
@@ -112,6 +117,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: 0 1rem 1rem 0;
     }
     
     

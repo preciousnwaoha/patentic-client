@@ -4,7 +4,7 @@ import abi from "../utils/Patentic.json";
 import { ethers } from "ethers";
 
 
-const contractAddress = "0xdAA6312a71a43E013B7FA0630A32c053094F18AC";
+const contractAddress = "0x8aC50E14b0968D13F0Fe9BC9FaBdCa6e989ED1ED";
 const contractABI = abi.abi
 
 
@@ -97,9 +97,8 @@ export const PatentsContextProvider = ({ children }) => {
         const patenticContract = new ethers.Contract(contractAddress, contractABI, signer);
         console.log("gotten contract: ", patenticContract)
         
-        let patents = await patenticContract.getAllPatents();
-        
-        console.log("Awaiting patents");
+        const patents = await patenticContract.getAllPatents().catch(err => console.log(err));
+        console.log("awaited patents");
 
 
       let patentsCleaned = patents.map(patent => {
@@ -207,7 +206,7 @@ const getPatentsOnAddress = async () => {
 
   }, [])
 
-  console.log(patents)
+  console.log("patents: ", patents)
 
     // useEffect(() => {
     //     if (connected) {

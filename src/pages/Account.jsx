@@ -4,6 +4,8 @@ import Messages from '../components/Messages/Messages';
 import Patents from '../components/Patents/Patents';
 import ContractContext from '../context/contract-context';
 import classes from "./Account.module.css"
+import Button from '../components/UI/Button';
+import NotConnected from '../components/Errors/NotConnected';
 
 /**
  * 
@@ -38,9 +40,17 @@ const Account = () => {
 
     if (!connected) {
         return (
-            <div>
-                Loading
-            </div>
+            <>
+                <Header />
+                <section className={classes["account"]}>
+        <h1 className={classes["title"]}>
+            Your Address Space
+        </h1>
+        <NotConnected />
+    </section>
+                
+            </>
+            
         )
     }
 

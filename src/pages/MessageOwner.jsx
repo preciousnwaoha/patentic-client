@@ -8,7 +8,7 @@ import classes from "./MessageOwner.module.css"
 
 const MessageOwner = () => {
     const params = useParams();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const contractCtx = useContext(ContractContext)
     const [isMessagingYourself, setIsMessagingYourself] = useState(false)
 
@@ -23,9 +23,7 @@ const MessageOwner = () => {
      useEffect(() => {
         console.log(to, currentAccount)
         setIsMessagingYourself(to === currentAccount);
-      }
-      
-      )
+      }, [])
 
     if (!connected) {
         return (
