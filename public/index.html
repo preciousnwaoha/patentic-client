@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+    
+    <title>Patentic</title>
+    <meta name="title" content="Wave Portal" />
+    <meta name="description" content="I want to meet you! Send me a wave now!" />
+    
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildspace.so/">
+    <meta property="og:title" content="Wave Portal">
+    <meta property="og:description" content="I want to meet you! Send me a wave now!">
+    <meta property="og:image" content="https://s3.amazonaws.com/cdn.buildspace.so/courses/ethereum-smart-contracts/metadata.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buildspace.so/">
+    <meta property="twitter:title" content="Wave Portal">
+    <meta property="twitter:description" content="I want to meet you! Send me a wave now!">
+    <meta property="twitter:image"
+      content="https://s3.amazonaws.com/cdn.buildspace.so/courses/ethereum-smart-contracts/metadata.png">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="follower">
+      <div id="circle1"></div>
+      <div id="circle2"></div>
+    </div>
+    
+    <script >
+      (function() {
+    var follower, init, mouseX, mouseY, positionElement, printout, timer;
+  
+    follower = document.getElementById('follower');
+  
+    printout = document.getElementById('printout');
+  
+    mouseX = (event) => {
+      return event.clientX;
+    };
+  
+    mouseY = (event) => {
+      return event.clientY;
+    };
+  
+    positionElement = (event) => {
+      var mouse;
+      mouse = {
+        x: mouseX(event),
+        y: mouseY(event)
+      };
+      follower.style.top = mouse.y + 'px';
+      return follower.style.left = mouse.x + 'px';
+    };
+  
+    timer = false;
+  
+    window.onmousemove = init = (event) => {
+      var _event;
+      _event = event;
+      return timer = setTimeout(() => {
+        return positionElement(_event);
+      }, 1);
+    };
+  
+  }).call(this);
+    </script>
+  </body>
+</html>

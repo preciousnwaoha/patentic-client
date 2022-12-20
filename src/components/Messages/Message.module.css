@@ -1,0 +1,27 @@
+.message {
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+.text {
+    margin-bottom: 0.5rem;
+}
+
+.to-from {
+    font-size: 0.75rem;
+}
+
+.time {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.patent {
+    font-size: 0.75rem;
+}
+

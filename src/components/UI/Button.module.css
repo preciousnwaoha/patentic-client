@@ -1,0 +1,40 @@
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    font-family: inherit;
+    background: var(--secondary-red-700);
+    border: 2px solid var(--dark-700);
+    font-size: 1rem;
+    outline: none;
+    font-weight: 700;
+    border-radius: 0px;
+    padding: 0.85rem 1.5rem;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .button div {
+    position: absolute;
+    font-family: inherit;
+    border: 2px solid var(--dark-700);
+    font-size: 1rem;
+    width: calc(100% + 4px);
+    font-weight: 700;
+    height: calc(100% + 4px);
+    background: var(--secondary-blue-700);
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    right: 2px;
+    top: -6px;
+  }
+
+  .button:hover div {
+    right: -2px;
+    top: -2px;
+    /* width: calc(100% + 4px); */
+    /* height: calc(100% + 4px); */
+  }

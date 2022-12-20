@@ -1,0 +1,31 @@
+.to-from {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.to-from p {
+    margin: 0;
+    background: var(--primary-700);
+    border: 2px solid var(--dark-700);
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.to-from div {
+    font-size: 2rem;
+    color: var(--secondary-blue-700);
+    font-weight: 300;
+    margin: 0 2rem;
+}
+
+.to-from .border-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: var(--secondary-red-700);
+    margin: 0;
+}

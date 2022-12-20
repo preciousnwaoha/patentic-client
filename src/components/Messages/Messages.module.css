@@ -1,0 +1,13 @@
+.messages {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.filter div {
+    cursor: pointer;
+}
+
+.filter div:hover {
+    text-decoration: underline;
+}

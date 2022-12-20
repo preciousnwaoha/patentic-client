@@ -1,0 +1,10 @@
+.create-patent {
+    margin-top: 4rem;
+    padding: 1rem;
+}
+
+.title {
+    font-family: var(--font-2);
+    text-align: center;
+    font-size: 2rem;
+}

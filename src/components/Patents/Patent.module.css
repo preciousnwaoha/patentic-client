@@ -1,0 +1,119 @@
+.patent {
+    border: 2px solid var(--dark-700);
+    display: inline-block;
+    /* flex: calc(50% - 4rem); */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 1rem);
+    padding: 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: var(--dark-700);
+    color: var(--light-900);
+    transition: .3s;
+    
+}
+
+
+
+.patent h2 {
+    color: var(--primary-700);
+    width: 70%;
+    transition: .3s;
+}
+
+.patent:hover {
+    color: var(--dark-700);
+    background: var(--primary-700);
+}
+
+.patent:hover h2 {
+    
+    color: var(--secondary-green-700);
+}
+
+.type {
+    position: absolute;
+    border: 2px solid var(--dark-700);
+    border-top: 0;
+    top: 0px;
+    right: 1.5rem;
+    height: 50px;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-3);
+    border-radius: 0 0 6px 6px;
+    color: var(--dark-700);
+    background: var(--secondary-green-700);
+    display: flex;
+    align-items: flex-end;
+    transition: .3s;
+}
+
+.type p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.content {
+    margin-bottom: 1rem;
+    /* transition: .3s; */
+}
+
+.owner {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--secondary-green-700);
+    
+    transition: .3s;
+}
+
+.patent:hover .owner {
+    font-weight: 700;
+    color: var(--dark-700);
+}
+
+@media screen and (min-width: 760px) {
+    .patent {
+        border: 2px solid black;
+        /* flex: calc(30% - 4rem); */
+        width: calc(50% - 1rem);
+        padding: 1rem;
+    }
+
+    .patent:nth-child(odd) {
+        margin: 0.5rem;
+        margin-left: 0;
+    }
+
+    .patent:nth-child(even) {
+        margin: 0.5rem;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .patent {
+        border: 2px solid black;
+        /* flex: calc(30% - 4rem); */
+        /* width: calc(33.33% - 0.25rem); */
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .patent:nth-child(odd) {
+        margin: 0 auto;
+    }
+    .patent:nth-child(even) {
+        margin: 0 auto;
+    }
+   
+}

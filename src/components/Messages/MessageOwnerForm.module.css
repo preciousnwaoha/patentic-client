@@ -1,0 +1,124 @@
+.message-owner-form {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-700);
+    border: 2px solid var(--dark-700);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.info {
+    background: var(--light-700);
+    background: var(--secondary-red-700);
+    background: var(--dark-700);
+    border: 2px solid var(--dark-700);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--light-900);
+}
+
+
+.text label {
+    font-size: 1.25rem;
+    /* margin-bottom: 1rem; */
+}
+
+.text textarea {
+    display: block;
+    font-weight: 300;
+    width: 100%;
+    margin-top: 0.75rem;
+    border: 2px solid var(--dark-700);
+    color: var(--dark-700);
+    padding: 1rem;
+    height: auto;
+    border-radius: 8px;
+    min-height: 300px;
+    background: var(--light-700);
+    font-family: var(--font-1);
+}
+
+.text textarea::placeholder {
+    color: var(--dark-700);
+}
+
+.text textarea:focus {
+    outline: none;
+    /* border: 2px solid var(--light-700); */
+}
+
+.to h4, .patent h4 {
+    margin-bottom: 0.5rem;
+}
+
+.to p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.patent p {
+    color: var(--primary-700);
+    font-size: 0.65rem;
+    cursor: pointer;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.patent p:hover {
+    text-decoration: underline;
+}
+
+.type,
+.fee-note {
+    border: 2px solid var(--dark-700);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    color: var(--dark-700);
+    background: var(--secondary-red-700);
+    display: inline-block;
+}
+
+.fee-note h4 {
+    margin: 0.5rem 0;
+}
+
+.submit {
+    background: var(--primary-700);
+}
+
+@media screen and (min-width: 760px) {
+    .message-owner-form {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .text {
+        width: calc(65%);
+    }
+    
+    .info {
+        width: calc(35% - 1rem);
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    
+    
+    .message-owner-form label {
+        font-size: 1.25rem;
+    }
+    
+    .submit {
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,12 @@
+.message-owner {
+    margin-top: 4rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.message-owner h1 {
+    font-size: 2rem;
+    font-family: var(--font-2);
+    text-align: center;
+}
+
